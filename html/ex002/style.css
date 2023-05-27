@@ -1,5 +1,20 @@
 @charset "UTF-8";
 
+@keyframes pulse {
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.35);
+        opacity: .6;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 :root{
     font-size: 62.5%;
 }
@@ -10,11 +25,66 @@
     font-size: 1em;
 }
 
+.bg{
+    height: 20vh;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #555;
+    background-image: url('https://th.wallhaven.cc/small/2y/2y9ojg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+a{
+    text-align: center;
+    background: steelblue;
+    color: black;
+    border: none;
+    font-size: 2.8rem;
+    padding: 0.6rem 2.4rem;
+    margin: auto;
+    margin-top: 10px;
+    width: 80%;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    transition: all .2s, background-color 1s;
+}
+
+[data-anchor="santander"] {
+    text-align: center;
+    background: steelblue;
+    color: black;
+    border: none;
+    font-size: 2.8rem;
+    padding: 0.6rem 2.4rem;
+    margin: auto;
+    margin-top: 10px;
+    width: 80%;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    transition: all .2s, background-color 1s;
+}
+
+[data-anchor="team"] {
+    animation: pulse 2s infinite;
+    transform: scale(1);
+}
+
+[data-anchor="santander"]:hover {
+    background-color: black;
+    color: steelblue;
+    transform: scale(1.2);
+}
+
 .boxes{
     height: calc(100vh - 14rem);
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .box{
@@ -27,4 +97,22 @@
     color: white;
     font-size: 4rem;
     display: inline-block;
+}
+
+@media screen and (min-width: 1000px) {
+    .bg{
+        height: 50vh;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 999px) {
+    .bg{
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .bg{
+        height: 40vh;
+    }
 }
