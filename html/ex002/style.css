@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+:root{
+    font-size: 62.5%;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+.boxes{
+    position: relative;
+    display: flex;
+
+}
+
+.box{
+    height: 10rem;
+    width: 20rem;
+    margin: 1.5rem;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    background-color: blue;
+    color: white;
+    border: 10px solid red;
+    display: inline-block;
+    border-radius: 0.4rem;
+}
+
+img{
+    height: 10rem;
+    width: 14rem;
+    object-fit: cover;
+}
